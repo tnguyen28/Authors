@@ -4,6 +4,7 @@ import "./App.css";
 import Main from "./views/Main";
 import Update from "./views/Update";
 import Create from "./views/Create";
+import NotFound from "./views/NotFound";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <Main path="/" />
         <Update path="/:id/edit" />
         <Create path="/create" />
+        <NotFound path="/404" />
       </Router>
     </div>
   );

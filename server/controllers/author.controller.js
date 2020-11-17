@@ -4,7 +4,6 @@ module.exports.index = (request, response) => {
     message: "Tapped into author database",
   });
 };
-// The method below is new
 module.exports.createAuthor = (request, response) => {
   const { name } = request.body;
   Author.create({
@@ -15,7 +14,7 @@ module.exports.createAuthor = (request, response) => {
 };
 
 module.exports.getAllAuthors = (request, response) => {
-  Author.find({})
+  Author.find({}, null, { sort: { name: 1 } })
     .then((authors) => response.json(authors))
     .catch((err) => response.json(err));
 };

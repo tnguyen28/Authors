@@ -1,4 +1,4 @@
-import { navigate } from "@reach/router";
+
 import React, { useState } from "react";
 function AuthorForm(props) {
   //keep track of what is being typed via useState hook
@@ -9,7 +9,6 @@ function AuthorForm(props) {
   const onSubmitHandler = (e) => {
     e.preventDefault();
     onSubmitProp({ name });
-    //navigate("/");
   };
 
   return (
